@@ -1,0 +1,99 @@
+{"intents": [
+        {"tag": "greeting",
+         "patterns": ["Hi there", "How are you", "Is anyone there?","Hey","Hola", "Hello", "Good day", "Hi"],
+         "responses": ["Hello, Welcome to Apollo Hospital, How can i help you?"],
+         "context": [""]
+        },
+        {"tag": "goodbye",
+         "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time"],
+         "responses": ["See you!", "Have a nice day", "Bye! Come back again soon."],
+         "context": [""]
+        },
+        {"tag": "thanks",
+         "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me", "Thank you for the help", "Thats great"],
+         "responses": ["Happy to help!", "Any time!", "My pleasure", ":) You're Welcome!!"],
+         "context": [""]
+        },
+        {"tag": "noanswer",
+         "patterns": [],
+         "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand"],
+         "context": [""]
+        },
+        {"tag": "options",
+         "patterns": ["How you could help me?", "What you can do?", "What help you provide?", "How you can be helpful?", "What support is offered", "What can you do?"],
+         "responses": ["I can guide you about adverse drug reactions, give information regarding our hospital, give you helpline numbers.", "I have the information regarding adverse drug, treaments offered in our hospital and helpline numbers"],
+         "context": [""]
+        },
+        {"tag": "adverse_drug",
+         "patterns": ["adverse drug reactions","How to check Adverse drug reaction?", "Open adverse drugs module", "What is adverse drug?", "Can you guide me through adverse drug" ],
+         "responses": ["Navigating to Adverse drug reaction module"],
+         "context": ["adverse_drug_reactions"]
+        },
+        {"tag": "adverse_drug_reactions",
+                "patterns": [],
+                "responses": ["An adverse drug reaction (ADR) is an unwanted or harmful reaction experienced following the administration of a drug or combination of drugs under normal conditions of use and is suspected to be related to the drug. An ADR will usually require the drug to be discontinued or the dose reduced. An adverse event is harm that occurs while a patient is taking a drug, irrespective of whether the drug is suspected to be the cause.Drug abuse is the misuse of recreational or therapeutic drugs that may lead to addiction or dependence, serious physiological injury (such as damage to kidneys, liver, heart), psychological harm (abnormal behavior patterns, hallucinations, memory loss), or death."],
+                "context": []
+        },
+        {"tag": "treatments",
+         "patterns": ["What are the treatments offered?", "treatments offered", "Available treatments"],
+         "responses": ["We offer treatments to all heart ailments", "Treatments related to all heart ailements are offered in our hospital"],
+         "context": ["treatments_offered"]
+        },
+        {"tag": "treatments_offered",
+                "patterns": ["and what are the treatments?", "what are they?"],
+                "responses": ["we perform treatments like Angioplasty and stents, Coronary artery bypass graft surgery, Heart Valve Surgery and Implantable Cardioveter Difibrillator(ICD)"],
+                "context": ["treatments_offered"]
+        },
+        {"tag": "Angioplasty",
+                "patterns": ["Angioplasty?", "What is Angioplasty?", "Can you say something about Angioplasty?"],
+                "responses": ["Angioplasty is a treatment that uses stents to improve blood flow to the heart by opening a narrowed or blocked coronary artery."],
+                "context": ["Angioplasty_detailed"]
+        },
+        {"tag": "Angioplasty_detailed",
+                "patterns": ["Can you tell me in detail about angioplasty?", "How Angioplasty is done?", "Can you explain more about Angioplasty?", "What are the pros and cons of angioplasty?"],
+                "responses": ["Coronary angioplasty uses a special balloon and a metal mesh tube (stent) to open up a narrowed or blocked coronary artery. In the long term, this should improve blood flow to the heart muscle and result in less or no angina. Angioplasty is sometimes used as an emergency treatment for people that have had a heart attack. You’ll usually have angiography before your angioplasty, but sometimes this is done at the same time.An angioplasty is not a cure for heart disease. It may help control your symptoms, but it does not fix the underlying heart disease that caused the symptoms in the first place. To lower your chance of further heart problems, you will need to make and maintain changes to your lifestyle."],
+                "context": []
+        },
+        {"tag": "bypass",
+                "patterns": ["Can I know what is bypass surgery?", "What is coronary artery bypass surgery?", "What is bypass surgery?", "Can you say something about coronary artery bypass surgery?"],
+                "responses": ["Bypass surgery is used to get blood to part of your heart muscle when your arteries are blocked."],
+                "context": ["bypass_detailed"]
+        },
+        {"tag": "bypass_detailed",
+                "patterns": ["Can you tell me in detail about bypass surgery?", "How coronary artery bypass surgey is done?", "Can you explain more about artery bypass surgery?", "What are the pros and cons of  bypass surgery?"],
+                "responses": ["Coronary artery bypass graft surgery (CABG) is done mainly to relieve angina symptoms. The surgery improves blood flow to the heart muscle. This can result in a better quality of life with less or no angina. A blood vessel is grafted between the aorta (the main artery leading from the heart) and the coronary artery, or arteries leading to the heart muscle. This allows the blood to bypass blocked arteries and restores blood flow to the heart muscle. It is quite normal to need two to four grafts, otherwise known as a double, triple or quadruple bypass."],
+                "context": []
+        },
+        {"tag": "heart_valve",
+                "patterns": ["Can I know what is heart valve surgery?", "What is heart valve surgery?", "Can you say something about heart valve surgery?"],
+                "responses": ["Heart valve surgery is used to either repair or replace diseased heart valves."],
+                "context": ["heart_valve_detailed"]
+        },
+        {"tag": "heart_valve_detailed",
+                "patterns": ["Can you tell me in detail about heart valve surgery?", "How heart valve surgery surgey is done?", "Can you explain more about heart valve surgery?", "What are the pros and cons of heart valve surgery?"],
+                "responses": ["There are various procedures that can help to improve or stop symptoms of heart valve disease and prevent further damage to your heart. However, a procedure is not without risks of its own. Your doctor or specialist will talk you through the risks and benefits for you. There are three common types of heart valve procedures. Open heart surgery to repair or replace a valve, Valvuloplasty (using a balloon to widen a narrowed heart valve) and Transcatheter aortic valve implantation (TAVI)"],
+                "context": []
+        },
+        {"tag": "Icd",
+                "patterns": ["What is implantable cardioverter difibrillator?", "What is ICD?", "Can you say something about ICD?", "Can you say something about implantable cardioverter difibrillator?"],
+                "responses": ["An ICD is a device that helps people with dangerously irregular heart rhythms. It is a small device that helps keep your heart beating at a steady rate. It can reduce the risk of your heart stopping (cardiac arrest)"],
+                "context": ["Icd_detailed"]
+        },
+        {"tag": "Icd_detailed",
+                "patterns": ["Can you tell me in detail about ICD?", "How ICD is done?", "Can you explain more about ICD?", "What are the pros and cons of ICD?"],
+                "responses": ["The ICD is usually fitted in your chest. It checks your heart beat all the time. If your heart beat is too slow, some ICDs are programmed to correct it (like a pacemaker). This is called pacing.If your heart is in danger of stopping, the ICD can deliver an electric shock to help it return to a normal rate. This is called defibrillation."],
+                "context": []
+        },
+        {"tag": "timings",
+                "patterns": ["what are the timings of the hospital?"],
+                "responses": ["Hospital will be opened from 7am to 10pm daily, for emergency cases it will be opened 24hrs/7"],
+                "context": []
+        },
+        
+	{"tag": "sorry_we_donot_have_details",
+         "patterns": [],
+         "responses": ["Sorry! The information you need is unavailable."],
+         "context": [""]
+        }
+   ]
+}
